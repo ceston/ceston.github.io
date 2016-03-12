@@ -1,0 +1,34 @@
+@media screen and (min-width: 480px) {
+
+	/****************************************************************************
+	Two Columns Layout
+	****************************************************************************/
+	#primary {
+		width: 50%;
+		float: left;
+	}
+
+	#secondary {
+		width: 40%;
+		float: right;
+	}	
+
+
+	/****************************************************************************
+	PAGE: PORTFOLIO
+		margin is set to 2.5% (so both sides = 5%)
+		for galleries, we want 3 frame in a row
+		3 * 5 = 15
+		100% - 15% = 85%
+		85% / 3 = 28.3333333333333 ((do not round up;))
+
+		Clear the 4th item to clear up the line wrapping caused lineup problem
+	****************************************************************************/
+	#gallery li {
+		width: 28.3333%;
+	}
+
+	#gallery li:nth-child(4n) {
+		clear: left;
+	}
+}
